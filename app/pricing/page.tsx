@@ -48,8 +48,8 @@ export default function PricingPage() {
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-[var(--gray-200)]">
-                  <div className="text-meta font-medium">
-                    Starting at {item.price}
+                  <div className="text-meta ">
+                    Starting at <span className="text-lead font-semibold">{item.price}</span>
                   </div>
                   <div className="text-xs text-neutral-500 mt-1">
                     Scoped per project

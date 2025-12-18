@@ -348,6 +348,8 @@ body {
 }
 
 .btn-secondary::after {
+  border-left: 2px solid var(--color-accent);
+  border-right: 2px solid var(--color-secondary);
 }
 
 

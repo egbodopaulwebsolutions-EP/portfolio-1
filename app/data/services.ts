@@ -89,7 +89,7 @@ export const SERVICES: services[] = [
   kicker: "Visibility",
   title: "Search Clarity & On-Page SEO",
   desc: "For businesses who want to be found by the right people.",
-  media: "/images/search.svg",
+  media: "/images/search-and-visibility-seo.svg",
   reversed: false,
   startText: "Gain More Search Visibility",
 
@@ -125,7 +125,7 @@ export const SERVICES: services[] = [
     kicker: "Campaign",
     title: "Focused Landing Pages",
     desc: "For campaigns where clarity matters more than cleverness.",
-    media: "/images/landing-page.svg",
+    media: "/images/focus-landing-pages.svg",
     reversed: false,
     startText: "Build your landing page",
 

@@ -6,7 +6,7 @@ import type { CaseStudy } from "../../data/cs_cases";
 import caseStudies from "../../data/cs_cases";
 import { useGridStagger } from "../../gsaphooks/useGridStagger";
 import Container from "../utilities/container";
-
+import { TruncateWords } from "../utilities/TruncateWords";
 export default function HomeCaseStudies() {
 
 const gridAnimation = useGridStagger();
@@ -66,9 +66,10 @@ gridRef
               </div>
 
               <div className="p-6 space-y-3">
-                <h3 className="text-display h3">{cs.title}</h3>
+                <h3 className="text-display h4">{cs.title}</h3>
                 <p className="text-lead text-sm text-neutral-600">
-                  {cs.overview}
+                  {cs.overview && TruncateWords(cs.overview, 10)}
+
                 </p>
                 <span className="text-meta text-[var(--color-primary)]">
                   View Case →

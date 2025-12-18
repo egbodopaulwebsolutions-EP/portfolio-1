@@ -106,7 +106,7 @@ const CASE_STUDIES: CaseStudy[] = [
         "The entire storefront was rebuilt using a lightweight Shopify theme, optimized assets, and best-practice loading strategies. Unnecessary scripts and legacy dependencies were removed or replaced with custom solutions.",
       implication:
         "Page load times improved dramatically, bounce rates dropped, and returning customers immediately noticed the speed and responsiveness improvements.",
-      mockup: "/case-studies/brands/performance.png"
+      mockup: ""
     }
   ],
 
@@ -129,7 +129,7 @@ const CASE_STUDIES: CaseStudy[] = [
   client: "SMDC Real Estate Sales Manager",
   role: "Web Strategist, SEO Specialist, UI/UX Designer & Developer",
   timeline: "4 weeks",
-  websiteURL: "",
+  websiteURL: "https://smdcheightscondominiums.com",
 
   overview:
     "The client was a real estate sales manager under SMDC who needed a dedicated lead generation website to support Google Ads campaigns. With Meta ads becoming increasingly crowded and expensive, the goal was to create a conversion-focused website that could capture high-intent traffic through search. The platform needed to clearly communicate SMDC’s advantages for overseas buyers — particularly OFWs and foreign nationals — while supporting long-term SEO growth through structured content, optimized listings, and location-based pages.",
@@ -173,7 +173,7 @@ const CASE_STUDIES: CaseStudy[] = [
         "The site was structured around lead capture and buyer intent. Clear CTAs, strategically placed inquiry forms, and logical page flows ensured visitors coming from Google Ads immediately understood the value proposition and next steps.",
       implication:
         "Traffic from paid ads converted more efficiently, improving lead quality and reducing wasted ad spend.",
-      mockup: "/case-studies/smdc/lead-structure.png"
+      mockup: "/SMDCKB/lead-generation-architecture.svg"
     },
     {
       title: "SEO-Optimized Condo Listings and Location Pages",
@@ -181,7 +181,7 @@ const CASE_STUDIES: CaseStudy[] = [
         "Each condo listing was built with structured metadata, optimized headings, internal links, and supporting copy. Location pages for areas like Pasay and Manila were created to capture geo-specific search intent and provide contextual relevance.",
       implication:
         "The site gained stronger organic visibility while reinforcing authority around SMDC properties and key locations.",
-      mockup: "/case-studies/smdc/listings.png"
+      mockup: "/SMDCKB/condo-listing-and-location.png"
     },
     {
       title: "OFW & Foreign Buyer Content Strategy",
@@ -189,7 +189,7 @@ const CASE_STUDIES: CaseStudy[] = [
         "Dedicated pages were created specifically for OFWs and foreign nationals, addressing ownership eligibility, buying processes, payment structures, and common concerns. FAQs and long-form content were designed to answer questions before users even asked them.",
       implication:
         "Overseas buyers felt welcomed, informed, and confident — increasing trust and inquiry rates.",
-      mockup: "/case-studies/smdc/ofw-pages.png"
+      mockup: "/SMDCKB/ofws-foreigners.png"
     },
     {
       title: "Amenity-Based Maps & Location Context",
@@ -197,7 +197,7 @@ const CASE_STUDIES: CaseStudy[] = [
         "Interactive maps highlighted nearby malls, hospitals, transport hubs, and lifestyle amenities around each property. This allowed users to immediately understand the value of each location without needing local knowledge.",
       implication:
         "Buyers abroad could quickly visualize the lifestyle benefits of each listing, reducing uncertainty and increasing engagement.",
-      mockup: "/case-studies/smdc/maps.png"
+      mockup: "/SMDCKB/location-maps.png"
     }
   ],
 

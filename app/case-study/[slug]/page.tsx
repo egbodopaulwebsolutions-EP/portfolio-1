@@ -150,14 +150,14 @@ export default function CaseStudyPage({ params }: PageProps) {
       {Array.isArray(caseStudy.challenges) && caseStudy.challenges.length > 0 && (
         <section className="border-t border-neutral-200 py-[var(--space-section)]">
           <Container>
-          <SectionHeading>Why This Was Hard</SectionHeading>
-          <ul className="mt-8 space-y-4 list-disc text-lead marker:text-[var(--color-primary)]">
-            {caseStudy.challenges!.map((item, i) => (
-              <li key={i} data-fade >
-                {item}
-              </li>
-            ))}
-          </ul>
+            <SectionHeading>Why This Was Hard</SectionHeading>
+            <ul className="mt-8 space-y-4 list-disc text-lead marker:text-[var(--color-primary)]">
+              {caseStudy.challenges!.map((item, i) => (
+                <li key={i} data-fade >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </Container>
         </section>
       )}
@@ -183,7 +183,7 @@ export default function CaseStudyPage({ params }: PageProps) {
                     Step {i + 1}
                   </span>
 
-                  <h3 className="mt-2 text-display h3">
+                  <h3 className="mt-2 text-display h4">
                     {step.title}
                   </h3>
 
@@ -196,16 +196,19 @@ export default function CaseStudyPage({ params }: PageProps) {
                   </p>
                 </div>
 
-                <div data-fade className="overflow-hidden">
-                  <Image
-                    src={step.mockup}
-                    alt={step.title}
-                    width={1200}
-                    height={800}
-                    className="w-full"
-                  />
-                  <div>{step.mockup}</div>
-                </div>
+                {step.mockup && step.mockup.trim() !== "" && (
+                  <div data-fade className="overflow-hidden">
+                    <Image
+                      src={step.mockup}
+                      alt={step.title}
+                      width={1200}
+                      height={800}
+                      className="w-full"
+                    />
+
+                  </div>
+                )}
+
               </div>
             ))}
           </div>
