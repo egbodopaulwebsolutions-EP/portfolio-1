@@ -28,10 +28,10 @@ export default function TopLoader() {
   }, [pathname]);
 
   return (
-    <div className="fixed top-0 left-0 z-[9999999] h-[2px] w-full pointer-events-none">
+    <div className="fixed top-0 left-0 z-[9999999] h-[4px] w-full pointer-events-none">
       <div
         className={`
-          h-full bg-indigo-500
+          h-full bg-[var(--color-primary)]
           transition-all duration-300 ease-out
           ${loading ? "w-[90%] opacity-100" : "w-full opacity-0"}
         `}

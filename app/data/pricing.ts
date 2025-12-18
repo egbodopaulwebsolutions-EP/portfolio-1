@@ -1,20 +1,39 @@
-export const PRICING = [
+// data/pricing.ts
+
+export type PricingItem = {
+  id: string;
+  title: string;
+  description: string;
+  range: string;
+  note: string;
+};
+
+export const PRICING: PricingItem[] = [
   {
-    label: "Website Design & Build",
-    title: "Clarity-first websites",
-    text: "Structured design and development that helps visitors understand, trust, and take action.",
-    price: "$750",
+    id: "websites",
+    title: "Website design & development",
+    description:
+      "New websites, redesigns, and structural improvements focused on clarity, credibility, and ease of understanding.",
+    range: "$2,500 – $6,500+",
+    note:
+      "Pricing depends on number of pages, content readiness, and level of refinement required.",
   },
   {
-    label: "Focused Landing Pages",
-    title: "Single-goal pages",
-    text: "Purpose-built pages for launches, campaigns, or lead generation with minimal friction.",
-    price: "$450",
+    id: "shopify",
+    title: "Shopify stores & customization",
+    description:
+      "Branded Shopify builds and refinements designed to reduce hesitation and support confident purchasing.",
+    range: "$3,000 – $7,500+",
+    note:
+      "Varies based on product count, custom templates, and checkout complexity.",
   },
   {
-    label: "Shopify Stores",
-    title: "Custom ecommerce foundations",
-    text: "Thoughtful storefronts designed for usability, trust, and long-term growth.",
-    price: "$1,000",
+    id: "seo",
+    title: "Search clarity & on-page SEO",
+    description:
+      "Structural and content-focused SEO work aligned with real search intent, not keyword stuffing.",
+    range: "$1,000 – $3,000",
+    note:
+      "Best suited for focused page sets or clearly defined search goals.",
   },
 ];

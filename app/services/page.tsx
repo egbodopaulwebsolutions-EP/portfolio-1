@@ -1,8 +1,8 @@
-import Link from "next/link"
-import Image from "next/image"
+
 import { ServiceIndividual } from "../components/sections/Services"
 import { SERVICES } from "../data/services"
 import Container from "../components/utilities/container"
+import ButtonLink from "../components/utilities/Button"
 
 export default function ServicesPage() {
 
@@ -16,7 +16,7 @@ export default function ServicesPage() {
         -------------------------------------------------- */}
         <Container>
         <header className="flex flex-col pb-10 items-center space-y-6 border-b border-[var(--gray-200)]">
-          <h1 className="h1 text-display text-[var(--color-secondary)]">
+          <h1 className="h1 text-display text-[var(--color-primary)]">
             Services
           </h1>
           <p className="text-lead ">
@@ -44,7 +44,8 @@ export default function ServicesPage() {
 
         {/* --------------------------------------------------
            CASE STUDY BRIDGE
-        -------------------------------------------------- */}
+        -------------------------------------------------- 
+
         <section className="pt-[var(--space-xl)] space-y-12">
           <h2 className="h3 text-display">
             Applied in real projects
@@ -71,11 +72,14 @@ export default function ServicesPage() {
           </div>
         </section>
 
+        */}
+
         {/* --------------------------------------------------
            FINAL CTA
         -------------------------------------------------- */}
-        <section className="pt-[var(--space-xl)] max-w-[60ch] space-y-6">
-          <h2 className="h3 text-display">
+        <section className="pt-[var(--space-xl)]">
+          <Container size="narrow" center className=" space-y-4">
+          <h2 className="h3 text-display text-[var(--color-primary)]">
             Not sure where to start?
           </h2>
 
@@ -83,12 +87,13 @@ export default function ServicesPage() {
             Start with clarity. We’ll figure out the rest.
           </p>
 
-          <Link
-            href="/contact"
-            className="inline-block text-lead font-medium"
-          >
-            Start a conversation →
-          </Link>
+          <ButtonLink
+                  href="/how-i-work"
+                  className="mt-4 w-fit text-meta text-[var(--color-primary)]"
+                >
+                  Start a conversation →
+                </ButtonLink>
+          </Container>
         </section>
 
       </section>

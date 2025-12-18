@@ -61,8 +61,7 @@ export default function Navbar() {
               href="/case-studies"
               className={clsx(
                 "nav-link text-[var(--gray-600)] hover:text-[var(--gray-800)]",
-                (pathname === "/case-studies" ||
-                  pathname.startsWith("/case-study/")) &&
+                pathname === "/case-studies"  &&
                 "is-active text-[var(--gray-900)]"
               )}
             >

@@ -20,9 +20,31 @@ import Container from "../utilities/container";
 export default function ServicesModules() {
   return (
     <section id="services" className="relative">
+      {/* Noise overlay */}
+      <svg
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-10 h-full w-full opacity-[0.08]"
+      >
+        <defs>
+          <filter id="noise">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.6"
+              numOctaves="3"
+            />
+          </filter>
+        </defs>
+
+        <rect
+          width="100%"
+          height="100%"
+          filter="url(#noise)"
+          fill="rgba(0,0,0,0.4)"
+        />
+      </svg>
       <Container center>
-        <header className="pt-[var(--space-section-sm)] space-y-6">
-          <h1 className="text-display h2 text-[var(--color-secondary)]">
+        <header className="pt-[var(--space-section-lg)] space-y-6">
+          <h1 className="text-display h2 text-[var(--color-primary)]">
             Services
           </h1>
         </header>
@@ -66,14 +88,14 @@ export function ServiceIndividual({
   return (
     <section
       className="
-        py-[var(--space-section)]
+        py-[var(--space-section-sm)]
       "
     >
       <Container size="default">
         <div
           className={clsx(
-            "flex flex-col gap-16 items-center",
-            
+            "flex flex-col gap-16 items-center  border-b border-[var(--gray-200)] pb-10",
+  
             "md:grid md:grid-cols-2 md:items-center",
             reversed && "md:[&>*:first-child]:order-2"
           )}
@@ -108,33 +130,19 @@ export function ServiceIndividual({
 
           {/* TEXT */}
           <div className="gsap-text-block flex flex-col gap-6">
-            
 
-            <h2 className="gsap-text-item h3 text-display">
+
+            <h2 className="gsap-text-item h4 text-[var(--color-secondary)] text-display">
               {title}
             </h2>
-            <span className="relative gsap-text-item text-eyebrow underline-cust w-fit">
-              {kicker}
-            </span>
+
             <p className="gsap-text-item text-lead text-[var(--gray-700)]">
               {desc}
             </p>
 
-            {/* FEATURE LIST */}
-            <div className="gsap-text-item grid gap-3 pt-4">
-              {homeList.map((item, i) => (
-                <div
-                  key={i}
-                  className="w-fit rounded-lg bg-slate-50 px-6 py-4 text-sm text-slate-700"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-
             {/* CTAs */}
             <div className="flex flex-wrap gap-6 pt-6">
-             
+
 
               <ButtonLink
                 href={`/service/${slug}`}

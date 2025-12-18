@@ -20,13 +20,18 @@ export default function ServicePage({ params }: PageProps) {
     notFound();
   }
 
+  const otherServices = SERVICES
+    .filter((s) => s.slug !== slug)
+    .slice(0, 3);
+
+
   return (
     <main>
       {/* HERO */}
       <section className="min-h-[70vh] py-[var(--space-section-lg)] flex flex-col items-center justify-center border-b border-[var(--gray-200)]">
         <Container>
           <div className="container flex flex-row justify-center items-center gap-16 items-center">
-            <div className="space-y-6 max-w-xl">
+            <div className="space-y-6">
               <Underline className="underline-cust w-fit">
                 {service.kicker}
               </Underline>
@@ -103,6 +108,50 @@ export default function ServicePage({ params }: PageProps) {
           </div>
         </Container>
       </section>
+      {/* OTHER SERVICES */}
+      <section className="py-[var(--space-section)] border-t border-[var(--gray-200)]">
+        <Container>
+          <div className="container space-y-12">
+            <header className="max-w-xl space-y-4">
+              <h2 className="h3 text-display text-[var(--color-primary)]">
+                <Underline className="">
+                  Other services
+                </Underline>
+              </h2>
+              <p className="text-lead text-[var(--gray-700)]">
+                If your project needs a different kind of support, these may also be
+                relevant.
+              </p>
+            </header>
+
+            <div className="grid gap-8 md:grid-cols-3">
+              {otherServices.map((item) => (
+                <article
+                  key={item.slug}
+                  className="space-y-4"
+                >
+
+                  <h3 className="h4 text-display text-[var(--color-secondary)]">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm text-neutral-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+
+                  <ButtonLink
+                    href={`/service/${item.slug}`}
+                    className="inline-block text-sm btn-secondary font-medium"
+                  >
+                    Learn More
+                  </ButtonLink>
+                </article>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
     </main>
   )
 }

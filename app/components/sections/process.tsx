@@ -20,7 +20,7 @@ export default function AlternatingPinnedStory() {
       <Container size="default">
       {/* Header */}
       <div className=" space-y-4 mb-8">
-        <h2 className="text-display h2 text-[var(--color-secondary)]">
+        <h2 className="text-display h2 text-[var(--color-primary)]">
           How I Work?
         </h2>
         <p className="text-lead text-neutral-600">
@@ -29,10 +29,12 @@ export default function AlternatingPinnedStory() {
         </p>
       </div>
 
-      <ButtonLink href="/how-i-work" className="btn-secondary">
-Learn more
-
-      </ButtonLink>
+      <ButtonLink
+                  href="/how-i-work"
+                  className="mt-4 w-fit text-meta text-[var(--color-primary)]"
+                >
+                  Learn more →
+                </ButtonLink>
       </Container>
     </section>
   );

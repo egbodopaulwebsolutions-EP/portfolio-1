@@ -6,7 +6,7 @@ import Container from "../utilities/container";
 
 export default function HomeHero() {
   return (
-    <main className="relative py-[var(--space-section)] bg-yellow overflow-hidden">
+    <main className="relative pt-[var(--space-section-lg)] pb-[var(--space-section)] bg-yellow overflow-hidden">
       
       {/* Noise overlay */}
       <svg
@@ -50,8 +50,8 @@ export default function HomeHero() {
           <h1 className="text-display h1 tracking-tight">
             Websites that{" "}
             <span className="relative inline-block px-3">
-              <span className="absolute inset-0 -skew-y-2 rounded-xl bg-[var(--color-secondary)]/10" />
-              <span className="relative text-[var(--color-secondary)]">
+              <span className="absolute inset-0 -skew-y-2 rounded-xl bg-[var(--color-primary)]/10" />
+              <span className="relative text-[var(--color-primary)]">
                 earn trust
               </span>
             </span>

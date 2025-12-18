@@ -12,10 +12,32 @@ export default function HomeCaseStudies() {
 const gridAnimation = useGridStagger();
   return (
     <>
-    <section id="work" className="py-[var(--space-section)] bg-white">
+    <section id="work" className="py-[var(--space-section)] relative">
+      {/* Noise overlay */}
+      <svg
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-10 h-full w-full opacity-[0.09]"
+      >
+        <defs>
+          <filter id="noise">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.6"
+              numOctaves="3"
+            />
+          </filter>
+        </defs>
+
+        <rect
+          width="100%"
+          height="100%"
+          filter="url(#noise)"
+          fill="rgba(0,0,0,0.4)"
+        />
+      </svg>
       <Container>
         <header className="text-center space-y-4 border-b border-[var(--gray-200)] mb-20">
-          <h2 className="text-display h2 text-[var(--color-secondary)]">
+          <h2 className="text-display h2 text-[var(--color-primary)]">
             Recent Case Studies
           </h2>
           <p className="text-lead text-neutral-600 mb-16">
@@ -24,7 +46,29 @@ const gridAnimation = useGridStagger();
         </header>
       </Container>
     </section>
-    <section className="pb-[var(--space-section)]">
+    <section className="pb-[var(--space-section)] relative">
+       {/* Noise overlay */}
+      <svg
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-10 h-full w-full opacity-[0.09]"
+      >
+        <defs>
+          <filter id="noise">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.6"
+              numOctaves="3"
+            />
+          </filter>
+        </defs>
+
+        <rect
+          width="100%"
+          height="100%"
+          filter="url(#noise)"
+          fill="rgba(0,0,0,0.4)"
+        />
+      </svg>
       <Container>
       <CaseStudyItems featured={caseStudies} gridRef={gridAnimation}/>
       </Container>

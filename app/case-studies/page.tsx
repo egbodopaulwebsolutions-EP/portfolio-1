@@ -19,7 +19,7 @@ export default function caseStudy() {
             <section className="py-[var(--space-section)] ">
                 <Container>
                     <header className="flex flex-col pb-10 items-center space-y-6 border-b border-[var(--gray-200)]">
-                        <h1 className="h1 text-display text-[var(--color-secondary)]">
+                        <h1 className="h1 text-display text-[var(--color-primary)]">
                             Recent Case Studies
                         </h1>
                         <p className="text-lead text-neutral-600">

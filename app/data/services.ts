@@ -18,7 +18,7 @@ export const SERVICES: services[] = [
     slug: "website-design-build",
     kicker: "Foundational",
     title: "Website Design & Development",
-    desc: "For businesses and teams who need their website to feel clear, credible, and easy to trust.",
+    desc: "For businesses and teams who need a website that feels clear, credible, and easy to trust.",
     media: "/images/web-dev-layouts.png",
     reversed: false,
     startText: "Start Your website project",
@@ -51,9 +51,9 @@ export const SERVICES: services[] = [
   },
 
   {
-    slug: "shopify-stores-design-customisation",
+    slug: "shopify-development",
     kicker: "E-Commerce",
-    title: "Shopify Stores & Customization",
+    title: "Shopify development",
     desc: "For brands who want branded store that speaks to customers.",
     media: "/images/shopify.webp",
     reversed: false,
@@ -85,9 +85,9 @@ export const SERVICES: services[] = [
     ],
   },
 {
-  slug: "search-clarity-seo",
+  slug: "seo",
   kicker: "Visibility",
-  title: "Search Clarity & On-Page SEO",
+  title: "SEO",
   desc: "For businesses who want to be found by the right people.",
   media: "/images/search-and-visibility-seo.svg",
   reversed: false,
@@ -120,48 +120,13 @@ export const SERVICES: services[] = [
   ],
 }
 ,
-  {
-    slug: "focused-landing-pages",
-    kicker: "Campaign",
-    title: "Focused Landing Pages",
-    desc: "For campaigns where clarity matters more than cleverness.",
-    media: "/images/focus-landing-pages.svg",
-    reversed: false,
-    startText: "Build your landing page",
-
-    intro:
-      "When someone clicks an ad, the page they land on should answer their questions immediately.",
-
-    principles: [
-      "Single, clear message",
-      "Reduced cognitive load",
-      "Visual emphasis where it matters",
-    ],
-
-    homeList: [
-      "Clear alignment between intent and content",
-      "Messaging that feels direct and honest",
-      "Design that removes friction",
-    ],
-
-    deliverables: [
-      "Campaign-specific layouts",
-      "Responsive builds",
-      "Clear content structure",
-    ],
-
-    outcomes: [
-      "Visitors know exactly what’s being offered",
-      "Less confusion, less wasted traffic",
-    ],
-  },
 
   {
-    slug: "website-refinement-optimization",
+    slug: "website-Redesign-development",
     kicker: "Refinement",
-    title: "Website Refinement & Optimization",
+    title: "Website Redesign & development",
     desc: "For existing sites that work, but don’t feel as clear or confident as they should.",
-    media: "/images/ads.svg",
+    media: "/images/focus-landing-pages.svg",
     reversed: false,
     startText: "Refine your website",
     intro:

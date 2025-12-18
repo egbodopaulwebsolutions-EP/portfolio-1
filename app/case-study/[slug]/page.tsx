@@ -72,7 +72,7 @@ export default function CaseStudyPage({ params }: PageProps) {
 
               <h1
                 data-fade
-                className="mt-6 max-w-xl text-display h2 text-[var(--color-primary)]"
+                className="mt-6 max-w-xl text-display h2 text-[var(--color-secondary)]"
               >
                 {caseStudy.title}
               </h1>
