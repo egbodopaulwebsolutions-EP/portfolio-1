@@ -1,0 +1,126 @@
+import Link from "next/link"
+import Image from "next/image"
+import { ServiceIndividual } from "../components/sections/Services"
+import { SERVICES } from "../data/services"
+import Container from "../components/utilities/container"
+
+export default function ServicesPage() {
+
+  //services page
+  return (
+    <main className="">
+
+      <section className="py-[var(--space-section)]">
+        {/* --------------------------------------------------
+           HERO
+        -------------------------------------------------- */}
+        <Container>
+        <header className="flex flex-col pb-10 items-center space-y-6 border-b border-[var(--gray-200)]">
+          <h1 className="h1 text-display text-[var(--color-secondary)]">
+            Services
+          </h1>
+          <p className="text-lead ">
+            Digital systems that help businesses grow with clarity,
+            and less complexity.
+          </p>
+        </header>
+        </Container>
+
+
+        {/*services stack */}
+        <section id="services" className="relative">
+          {SERVICES.map((service, i) => (
+            <ServiceIndividual
+              key={service.slug}
+              {...service}
+              reversed={i % 2 !== 0}
+            />
+          ))}
+        </section>
+
+        {/* --------------------------------------------------
+           HOW IT FITS TOGETHER
+        -------------------------------------------------- */}
+
+        {/* --------------------------------------------------
+           CASE STUDY BRIDGE
+        -------------------------------------------------- */}
+        <section className="pt-[var(--space-xl)] space-y-12">
+          <h2 className="h3 text-display">
+            Applied in real projects
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <CaseBridge
+              service="Web Systems"
+              title="Unifying Five Shopify Brands"
+              href="/case-studies/fresh-and-good-food"
+            />
+
+            <CaseBridge
+              service="SEO & Demand Capture"
+              title="Real Estate Lead System for OFWs"
+              href="/case-studies/smdc-ofw"
+            />
+
+            <CaseBridge
+              service="Paid Traffic Systems"
+              title="High-Intent Google Ads for Property Buyers"
+              href="/case-studies/paid-traffic"
+            />
+          </div>
+        </section>
+
+        {/* --------------------------------------------------
+           FINAL CTA
+        -------------------------------------------------- */}
+        <section className="pt-[var(--space-xl)] max-w-[60ch] space-y-6">
+          <h2 className="h3 text-display">
+            Not sure where to start?
+          </h2>
+
+          <p className="text-lead text-[var(--gray-700)]">
+            Start with clarity. We’ll figure out the rest.
+          </p>
+
+          <Link
+            href="/contact"
+            className="inline-block text-lead font-medium"
+          >
+            Start a conversation →
+          </Link>
+        </section>
+
+      </section>
+    </main>
+  )
+}
+
+
+export function CaseBridge({
+  service,
+  title,
+  href,
+}: {
+  service: string
+  title: string
+  href: string
+}) {
+  return (
+    <a
+      href={href}
+      className="
+        block p-6 rounded-lg
+        bg-[var(--gray-50)]
+        hover:bg-[var(--gray-100)]
+        transition
+      "
+    >
+      <span className="text-sm opacity-60">{service}</span>
+      <h3 className="mt-2 font-medium">{title}</h3>
+      <span className="mt-4 inline-block text-sm opacity-60">
+        View case →
+      </span>
+    </a>
+  )
+}
