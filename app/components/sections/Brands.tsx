@@ -11,7 +11,7 @@ export default function BrandsSection() {
           Trusted by founders and growing brands
         </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-80">
+        <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-4 opacity-80">
           {[
             "/brands-trust/logo1.png",
             "/brands-trust/logo2.png",

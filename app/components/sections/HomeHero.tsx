@@ -32,7 +32,7 @@ export default function HomeHero() {
       </svg>
 
       <section className="relative z-20">
-        <Container center size="default" className="space-y-8">
+        <Container center size="default">
           
           {/* Badge */}
           <div className="inline-flex items-center gap-1 rounded-sm uppercase">

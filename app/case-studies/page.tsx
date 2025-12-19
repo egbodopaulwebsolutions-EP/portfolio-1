@@ -18,13 +18,13 @@ export default function caseStudy() {
         -------------------------------------------------- */}
             <section className="py-[var(--space-section)] ">
                 <Container>
-                    <header className="flex flex-col pb-10 items-center space-y-6 border-b border-[var(--gray-200)]">
-                        <h1 className="h1 text-display text-[var(--color-primary)]">
+                    <header className="flex flex-col  items-center">
+                        <h1 className="h1 text-display relative underline-cust text-[var(--color-primary)]">
                             Recent Case Studies
                         </h1>
-                        <p className="text-lead text-neutral-600">
+                        {/*<p className="text-lead text-neutral-600">
                             Real businesses. Real problems. Real transformations.
-                        </p>
+                        </p> */}
                     </header>
                 </Container>
             </section>

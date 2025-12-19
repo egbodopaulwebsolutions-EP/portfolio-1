@@ -43,7 +43,7 @@ export default function ServicesModules() {
         />
       </svg>
       <Container center>
-        <header className="pt-[var(--space-section-lg)] space-y-6">
+        <header className="pt-[var(--space-section-sm)]">
           <h1 className="text-display h2 text-[var(--color-primary)]">
             Services
           </h1>
@@ -94,10 +94,9 @@ export function ServiceIndividual({
       <Container size="default">
         <div
           className={clsx(
-            "flex flex-col gap-16 items-center  border-b border-[var(--gray-200)] pb-10",
-  
-            "md:grid md:grid-cols-2 md:items-center",
-            reversed && "md:[&>*:first-child]:order-2"
+            "flex flex-col gap-6 ",
+            "md:grid md:grid-cols-2 md:",
+            reversed && "md:"
           )}
         >
           {/* MEDIA */}
@@ -106,11 +105,10 @@ export function ServiceIndividual({
               containerRef.current = el;
               hoverRef.current = el;
             }}
-            className="relative w-full overflow-hidden rounded-2xl"
+            className="relative w-full overflow-hidden rounded-xl"
           >
             {media.endsWith(".mp4") ? (
               <video
-                ref={innerRef}
                 src={media}
                 autoPlay
                 loop
@@ -120,7 +118,6 @@ export function ServiceIndividual({
               />
             ) : (
               <img
-                ref={innerRef}
                 src={media}
                 alt={title}
                 className="w-full h-full object-contain"
@@ -129,24 +126,18 @@ export function ServiceIndividual({
           </div>
 
           {/* TEXT */}
-          <div className="gsap-text-block flex flex-col gap-6">
-
-
-            <h2 className="gsap-text-item h4 text-[var(--color-secondary)] text-display">
+          <div className="gsap-text-block flex flex-col gap-0">
+            <h2 className="gsap-text-item h3 text-[var(--color-secondary)] text-display">
               {title}
             </h2>
-
             <p className="gsap-text-item text-lead text-[var(--gray-700)]">
               {desc}
             </p>
-
             {/* CTAs */}
-            <div className="flex flex-wrap gap-6 pt-6">
-
-
+            <div className="flex flex-wrap pt-6">
               <ButtonLink
                 href={`/service/${slug}`}
-                className="btn-secondary text-meta"
+                className="text-[var(--color-primary)] text-meta"
               >
                 Learn More
               </ButtonLink>

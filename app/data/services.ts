@@ -19,7 +19,7 @@ export const SERVICES: services[] = [
     kicker: "Foundational",
     title: "Website Design & Development",
     desc: "For businesses and teams who need a website that feels clear, credible, and easy to trust.",
-    media: "/images/web-dev-layouts.png",
+    media: "/images/website-design-image.png",
     reversed: false,
     startText: "Start Your website project",
     intro:
@@ -53,9 +53,9 @@ export const SERVICES: services[] = [
   {
     slug: "shopify-development",
     kicker: "E-Commerce",
-    title: "Shopify development",
+    title: "E-commerce design & development",
     desc: "For brands who want branded store that speaks to customers.",
-    media: "/images/shopify.webp",
+    media: "/images/shopify-image.png",
     reversed: false,
     startText: "Build your store",
     intro:
@@ -85,11 +85,11 @@ export const SERVICES: services[] = [
     ],
   },
 {
-  slug: "seo",
+  slug: "Search engine optimisation",
   kicker: "Visibility",
-  title: "SEO",
+  title: "Search engine optimisation",
   desc: "For businesses who want to be found by the right people.",
-  media: "/images/search-and-visibility-seo.svg",
+  media: "/images/SEO-image.png",
   reversed: false,
   startText: "Gain More Search Visibility",
 
@@ -126,7 +126,7 @@ export const SERVICES: services[] = [
     kicker: "Refinement",
     title: "Website Redesign & development",
     desc: "For existing sites that work, but don’t feel as clear or confident as they should.",
-    media: "/images/focus-landing-pages.svg",
+    media: "/images/website-redesign.png",
     reversed: false,
     startText: "Refine your website",
     intro:

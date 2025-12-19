@@ -19,7 +19,7 @@ export default function AlternatingPinnedStory() {
 
       <Container size="default">
       {/* Header */}
-      <div className=" space-y-4 mb-8">
+      <div className=" mb-8">
         <h2 className="text-display h2 text-[var(--color-primary)]">
           How I Work?
         </h2>

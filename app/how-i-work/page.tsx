@@ -66,7 +66,7 @@ export default function AlternatingPinnedStory() {
             <section className="py-[var(--space-section)] ">
                 <Container>
                     <header className="flex flex-col pb-10 items-center space-y-6 border-b border-[var(--gray-200)]">
-                        <h1 className="h1 text-display text-[var(--color-secondary)]">
+                        <h1 className="h1 text-display text-[var(--color-primary)]">
                             How I Work
                         </h1>
                         <p className="text-lead text-neutral-600">
@@ -92,7 +92,7 @@ export default function AlternatingPinnedStory() {
 
                             {/* Title */}
                             <div className="md:w-1/3 relative z-10">
-                                <h3 className="story-title sticky top-32 text-display h2">
+                                <h3 className="story-title sticky top-32 text-display text-[var(--color-secondary)] h2">
                                     {step.title}
                                 </h3>
                             </div>

@@ -281,7 +281,7 @@ body {
   background-color: var(--color-secondary);
   color: var(--white);
   border-radius: var(--radius-btn);
-  padding: 1rem 1.7rem;
+  padding: 0.2rem 1.7rem;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   box-shadow: var(--shadow-soft);
   transition: filter 0.4s ease-in-out;
@@ -294,7 +294,7 @@ body {
 .btn-secondary {
   background: white;
   color: var(--color-secondary);
-  padding: 0.9rem 1.65rem;
+  padding: 0.6rem 1.65rem;
   position: relative;
   border-radius: var(--radius-btn);
   width: fit-content;

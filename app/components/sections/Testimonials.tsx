@@ -17,7 +17,7 @@ export default function TestimonialStory() {
   const testimonials: Testimonial[] = [
     {
       quote:
-        "Working with Paul changed how we think about product and customers. The new site didn’t just look better — conversions climbed within weeks, and our team finally had a website done right.",
+        "Working with Paul changed how we think about product and customers. The new site didn’t just look better — conversions climbed due to enhanced user experience, and our team finally had a web-tool we could mobilise.",
       name: "James",
       role: "CEO, FGFS",
       photo: "/images/testimonials/profile-testimonial1.png",
@@ -83,10 +83,10 @@ export default function TestimonialStory() {
                 </div>
 
                 <ButtonLink
-                  href="/contact"
+                  href="/services"
                   className="mt-4 w-fit text-meta text-[var(--color-primary)]"
                 >
-                  Start a conversation →
+                  View services →
                 </ButtonLink>
               </div>
             </article>

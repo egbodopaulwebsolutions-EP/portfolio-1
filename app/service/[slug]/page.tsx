@@ -28,10 +28,10 @@ export default function ServicePage({ params }: PageProps) {
   return (
     <main>
       {/* HERO */}
-      <section className="min-h-[70vh] py-[var(--space-section-lg)] flex flex-col items-center justify-center border-b border-[var(--gray-200)]">
+      <section className="min-h-[70vh] py-[var(--space-section-lg)] flex flex-col justify-center border-b border-[var(--gray-200)]">
         <Container>
-          <div className="container flex flex-row justify-center items-center gap-16 items-center">
-            <div className="space-y-6">
+          <div className=" flex gap-10 flex-row">
+            <div className="">
               <Underline className="underline-cust w-fit">
                 {service.kicker}
               </Underline>
@@ -49,25 +49,25 @@ export default function ServicePage({ params }: PageProps) {
               <img
                 src={service.media}
                 alt={service.title}
-                className="w-full h-full object-cover"
+                className="w-full rounded-2xl h-full object-cover"
               />
             </div>
           </div>
-          <ButtonLink href="/contact" className="block btn-primary mt-20 tex-meta">
+          <ButtonLink href="/contact" className="block btn-primary mt-4 tex-meta">
             {service.startText}
           </ButtonLink>
         </Container>
       </section>
 
       {/* PRINCIPLES */}
-      <section className="py-[var(--space-section)] border-b border-[var(--gray-200)]">
-        <Container>
-          <div className="container grid md:grid-cols-[0.4fr_0.6fr] gap-16">
+      <section className="py-[var(--space-section-sm)] border-b border-[var(--gray-200)]">
+        <Container size="narrow">
+          <div className="container grid md:grid-cols-[0.4fr_0.6fr] gap-6">
             <h2 className="h3 text-display"><Underline className="underline-cust w-fit">
               Principles
             </Underline></h2>
 
-            <ul className="space-y-4 text-lead list-disc marker:text-[var(--color-primary)]">
+            <ul className="space-y-2 text-lead list-disc marker:text-[var(--color-primary)]">
               {service.principles.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -77,14 +77,14 @@ export default function ServicePage({ params }: PageProps) {
       </section>
 
       {/* DELIVERABLES */}
-      <section className="py-[var(--space-section)] border-b border-[var(--gray-200)]">
-        <Container>
-          <div className="container grid md:grid-cols-[0.4fr_0.6fr] gap-16">
+      <section className="py-[var(--space-section-sm)] border-b border-[var(--gray-200)]">
+        <Container size="narrow">
+          <div className="container grid md:grid-cols-[0.4fr_0.6fr] gap-6">
             <h2 className="h3 text-display"><Underline className="underline-cust w-fit">
               Deliverables
             </Underline></h2>
 
-            <ul className="space-y-4 text-lead list-disc marker:text-[var(--color-primary)]">
+            <ul className="space-y-2 text-lead list-disc marker:text-[var(--color-primary)]">
               {service.deliverables.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -94,13 +94,13 @@ export default function ServicePage({ params }: PageProps) {
       </section>
 
       {/* OUTCOMES */}
-      <section className="py-[var(--space-section)]">
-        <Container>
-          <div className="container grid md:grid-cols-[0.4fr_0.6fr] gap-16">
+      <section className="py-[var(--space-section-sm)]">
+        <Container size="narrow">
+          <div className="container grid md:grid-cols-[0.4fr_0.6fr] gap-6">
 
             <h2 className="h3 text-display"><Underline className="relative w-fit underline-cust">Outcomes</Underline></h2>
 
-            <ul className="space-y-4 text-lead list-disc marker:text-[var(--color-primary)]">
+            <ul className="space-y-2 text-lead list-disc marker:text-[var(--color-primary)]">
               {service.outcomes.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -110,10 +110,10 @@ export default function ServicePage({ params }: PageProps) {
       </section>
       {/* OTHER SERVICES */}
       <section className="py-[var(--space-section)] border-t border-[var(--gray-200)]">
-        <Container>
+        <Container size="default">
           <div className="container space-y-12">
-            <header className="max-w-xl space-y-4">
-              <h2 className="h3 text-display text-[var(--color-primary)]">
+            <header className=" space-y-4">
+              <h2 className="h2 text-display text-[var(--color-primary)]">
                 <Underline className="">
                   Other services
                 </Underline>
@@ -131,17 +131,17 @@ export default function ServicePage({ params }: PageProps) {
                   className="space-y-4"
                 >
 
-                  <h3 className="h4 text-display text-[var(--color-secondary)]">
+                  <h3 className="h3 text-display text-[var(--color-secondary)]">
                     {item.title}
                   </h3>
 
-                  <p className="text-sm text-neutral-600 leading-relaxed">
+                  <p className="text-lead text-neutral-600 leading-relaxed">
                     {item.desc}
                   </p>
 
                   <ButtonLink
                     href={`/service/${item.slug}`}
-                    className="inline-block text-sm btn-secondary font-medium"
+                    className="inline-block text-meta text-[var(--color-primary)] font-medium"
                   >
                     Learn More
                   </ButtonLink>

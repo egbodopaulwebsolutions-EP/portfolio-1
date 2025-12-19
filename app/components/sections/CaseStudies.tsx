@@ -35,12 +35,12 @@ const gridAnimation = useGridStagger();
           fill="rgba(0,0,0,0.4)"
         />
       </svg>
-      <Container>
-        <header className="text-center space-y-4 border-b border-[var(--gray-200)] mb-20">
+      <Container center>
+        <header className="text-center border-b border-[var(--gray-200)]">
           <h2 className="text-display h2 text-[var(--color-primary)]">
             Recent Case Studies
           </h2>
-          <p className="text-lead text-neutral-600 mb-16">
+          <p className="text-lead text-neutral-600">
             Real businesses. Real problems. Real transformations.
           </p>
         </header>

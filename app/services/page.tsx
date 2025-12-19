@@ -14,15 +14,11 @@ export default function ServicesPage() {
         {/* --------------------------------------------------
            HERO
         -------------------------------------------------- */}
-        <Container>
-        <header className="flex flex-col pb-10 items-center space-y-6 border-b border-[var(--gray-200)]">
+        <Container size="narrow" center>
+        <header className="flex flex-col relative items-center underline-cust">
           <h1 className="h1 text-display text-[var(--color-primary)]">
             Services
           </h1>
-          <p className="text-lead ">
-            Digital systems that help businesses grow with clarity,
-            and less complexity.
-          </p>
         </header>
         </Container>
 
@@ -77,8 +73,8 @@ export default function ServicesPage() {
         {/* --------------------------------------------------
            FINAL CTA
         -------------------------------------------------- */}
-        <section className="pt-[var(--space-xl)]">
-          <Container size="narrow" center className=" space-y-4">
+        <section className="pt-[var(--space-section-sm)]">
+          <Container size="narrow" center className="">
           <h2 className="h3 text-display text-[var(--color-primary)]">
             Not sure where to start?
           </h2>
@@ -88,7 +84,7 @@ export default function ServicesPage() {
           </p>
 
           <ButtonLink
-                  href="/how-i-work"
+                  href="/contact"
                   className="mt-4 w-fit text-meta text-[var(--color-primary)]"
                 >
                   Start a conversation →
