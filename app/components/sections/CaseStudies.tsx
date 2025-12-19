@@ -36,7 +36,7 @@ const gridAnimation = useGridStagger();
         />
       </svg>
       <Container center>
-        <header className="text-center border-b border-[var(--gray-200)]">
+        <header className="text-center ">
           <h2 className="text-display h2 text-[var(--color-primary)]">
             Recent Case Studies
           </h2>
@@ -79,7 +79,7 @@ const gridAnimation = useGridStagger();
 
 type caseprops = {
   featured: CaseStudy[]
-  gridRef: React.RefObject<HTMLDivElement | null>
+  gridRef?: React.RefObject<HTMLDivElement | null>
 
 
 }

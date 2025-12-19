@@ -10,6 +10,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import CASE_STUDIES from "@/app/data/cs_cases";
 import Container from "@/app/components/utilities/container";
+import { Import } from "lucide-react";
+import { CaseStudyItems } from "@/app/components/sections/CaseStudies";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +46,10 @@ export default function CaseStudyPage({ params }: PageProps) {
 
     return () => ctx.revert();
   }, []);
+
+  const currentIndex = CASE_STUDIES.findIndex(cs => cs.slug === slug);
+const nextCaseStudy =
+  CASE_STUDIES[(currentIndex + 1) % CASE_STUDIES.length];
 
   return (
     <main ref={rootRef} className="bg-white text-neutral-900">
@@ -234,6 +240,28 @@ export default function CaseStudyPage({ params }: PageProps) {
           </blockquote>
         </Container>
       </section>
+      {/* NEXT CASE STUDY */}
+<section className="border-t border-neutral-200 bg-neutral-50 py-[var(--space-section)]">
+  <Container>
+    <div className="mb-12">
+      <span className="text-xs uppercase tracking-widest text-neutral-400">
+        Next Case Study
+      </span>
+
+      <h2 className="mt-4 text-display text-[var(--color-primary)] h3">
+        Continue Reading
+      </h2>
+    </div>
+
+    <div className="">
+      <CaseStudyItems
+        featured={[nextCaseStudy]}
+       
+      />
+    </div>
+  </Container>
+</section>
+
     </main>
   );
 }

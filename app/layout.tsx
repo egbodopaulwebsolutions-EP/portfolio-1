@@ -6,6 +6,7 @@ import LenisProvider from "./components/layout/LenisProvider";
 import { Inter, Plus_Jakarta_Sans, Roboto } from "next/font/google";
 import TopLoader from "./components/layout/TopLoader";
 import GoogleAuthUI from "./components/layout/Contact";
+import Footer from "./components/layout/Footer";
 
 
 const jakarta = Roboto({
@@ -59,6 +60,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <GoogleAuthUI/>
+        <Footer/>
       </body>
     </html>
   );

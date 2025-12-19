@@ -18,7 +18,7 @@ export const SERVICES: services[] = [
     slug: "website-design-build",
     kicker: "Foundational",
     title: "Website Design & Development",
-    desc: "For businesses and teams who need a website that feels clear, credible, and easy to trust.",
+    desc: "For businesses and teams who need a website that communicates their value, feels clear, credible, and easy to trust.",
     media: "/images/website-design-image.png",
     reversed: false,
     startText: "Start Your website project",
@@ -33,8 +33,7 @@ export const SERVICES: services[] = [
     ],
 
     homeList: [
-      "Pages that explain themselves without effort",
-      "Layouts that feel calm, considered, and intentional",
+      "Pages that communicates value without effort",
       "Built to support real decision-making",
     ],
 

@@ -294,7 +294,7 @@ body {
 .btn-secondary {
   background: white;
   color: var(--color-secondary);
-  padding: 0.6rem 1.65rem;
+  padding: 0.2rem 1.7rem;
   position: relative;
   border-radius: var(--radius-btn);
   width: fit-content;

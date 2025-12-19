@@ -64,15 +64,11 @@ export default function AlternatingPinnedStory() {
 
             {/*  ---------------------------------------------- */}
             <section className="py-[var(--space-section)] ">
-                <Container>
-                    <header className="flex flex-col pb-10 items-center space-y-6 border-b border-[var(--gray-200)]">
+                <Container center>
+                    <header className="flex flex-col items-center underline-cust w-fit relative">
                         <h1 className="h1 text-display text-[var(--color-primary)]">
                             How I Work
                         </h1>
-                        <p className="text-lead text-neutral-600">
-                            A clear, repeatable process that turns ideas into focused,
-                            high-performing digital systems.
-                        </p>
                     </header>
                 </Container>
             </section>
@@ -86,7 +82,7 @@ export default function AlternatingPinnedStory() {
                             className="story-block min-h-screen py-16 flex flex-col md:flex-row gap-20 relative"
                         >
                             {/* Index */}
-                            <span className="absolute top-10 left-6 text-[18vw] md:text-[10vw] font-black text-neutral-200 select-none">
+                            <span className="absolute top-10 left-6 text-[18vw] md:text-[10vw] font-black text-[var(--color-primary)]/10 select-none">
                                 {String(i + 1).padStart(2, "0")}
                             </span>
 

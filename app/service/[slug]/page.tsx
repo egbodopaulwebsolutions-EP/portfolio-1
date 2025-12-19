@@ -5,7 +5,7 @@ import Underline from "@/app/components/utilities/Underline";
 import { SERVICES } from "@/app/data/services"
 import { notFound } from "next/navigation"
 import { use } from "react";
-
+import Image from "next/image";
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -109,7 +109,29 @@ export default function ServicePage({ params }: PageProps) {
         </Container>
       </section>
       {/* OTHER SERVICES */}
-      <section className="py-[var(--space-section)] border-t border-[var(--gray-200)]">
+      <section className="py-[var(--space-section)] relative border-t border-[var(--gray-200)]">
+        {/* Noise overlay */}
+        <svg
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-10 h-full w-full opacity-[0.08]"
+        >
+          <defs>
+            <filter id="noise">
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.6"
+                numOctaves="3"
+              />
+            </filter>
+          </defs>
+
+          <rect
+            width="100%"
+            height="100%"
+            filter="url(#noise)"
+            fill="rgba(0,0,0,0.4)"
+          />
+        </svg>
         <Container size="default">
           <div className="container space-y-12">
             <header className=" space-y-4">
@@ -134,7 +156,7 @@ export default function ServicePage({ params }: PageProps) {
                   <h3 className="h3 text-display text-[var(--color-secondary)]">
                     {item.title}
                   </h3>
-
+                  <div><img alt={item.title} src={item.media} /></div>
                   <p className="text-lead text-neutral-600 leading-relaxed">
                     {item.desc}
                   </p>

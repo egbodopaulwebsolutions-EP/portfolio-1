@@ -154,23 +154,22 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen flex items-center justify-center px-4">
-      <section className="w-full max-w-md bg-white py-8 box px-16">
-        <header className="mb-6 text-center">
-          <div className="mb-4 flex justify-center">
+      <section className="w-full max-w-md bg-white box px-16">
+        <header className="mb-6 flex flex-row justify-between pt-4 text-right ">
+          <div className="mb-4">
             <Image
               src="/egbodo-paul-logo-2.png"
               alt="Logo"
-              width={26}
-              height={26}
+              width={16}
+              height={16}
             />
           </div>
 
-          <h1 className="text-display h4 text-neutral-900">
-            Start your project
-          </h1>
-          <p className="mt-1 text-sm text-neutral-600">
+          <div className="text-right">
+          <p className="mt-1 italic text-sm text-neutral-600 underline-cust relative w-fit text-right">
             Tell me about your business
           </p>
+          </div>
         </header>
 
         <form className="space-y-4" onSubmit={handleSubmit}>

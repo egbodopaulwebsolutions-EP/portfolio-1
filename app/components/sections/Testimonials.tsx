@@ -17,7 +17,7 @@ export default function TestimonialStory() {
   const testimonials: Testimonial[] = [
     {
       quote:
-        "Working with Paul changed how we think about product and customers. The new site didn’t just look better — conversions climbed due to enhanced user experience, and our team finally had a web-tool we could mobilise.",
+        "We had great products — the challenge was communicating that clearly online. Paul helped us build a website that finally reflects the quality of what we do ",
       name: "James",
       role: "CEO, FGFS",
       photo: "/images/testimonials/profile-testimonial1.png",
@@ -27,7 +27,7 @@ export default function TestimonialStory() {
   return (
     <section
       ref={scope}
-      className="relative w-full overflow-hidden py-[var(--space-section-lg)]"
+      className="relative w-full overflow-hidden pt-[var(--space-section-lg)] pb-[var(--space-section)]"
     >
       <Container size="default">
         <div className="relative z-10 flex flex-col">
@@ -56,10 +56,6 @@ export default function TestimonialStory() {
 
               {/* CONTENT */}
               <div className="relative z-10 mx-auto flex flex-col gap-8 italic">
-                <blockquote className="text-lead-large">
-                  “{t.quote}”
-                </blockquote>
-
                 <div className="flex items-center gap-4">
                   {t.photo ? (
                     <img
@@ -81,13 +77,14 @@ export default function TestimonialStory() {
                     </div>
                   </div>
                 </div>
+                
+                <blockquote className="text-lead-large">
+                  “{t.quote}”
+                </blockquote>
 
-                <ButtonLink
-                  href="/services"
-                  className="mt-4 w-fit text-meta text-[var(--color-primary)]"
-                >
-                  View services →
-                </ButtonLink>
+                
+
+                
               </div>
             </article>
           ))}
