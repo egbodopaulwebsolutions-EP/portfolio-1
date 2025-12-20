@@ -5,6 +5,7 @@ import gsap from "../gsaphooks/gsapSetup";
 import { processSteps } from "@/app/data/process";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "../components/utilities/container";
+import ButtonLink from "../components/utilities/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -103,8 +104,17 @@ export default function AlternatingPinnedStory() {
                                     <strong>Outcome:</strong> {step.outcome}
                                 </p>
                             </div>
+                            
                         </div>
                     ))}
+                    <section className="flex justify-center">
+                    <ButtonLink
+                                href="/case-studies"
+                                className="inline-block mx-auto btn-secondary mt-10 mb-10 text-meta text-[var(--color-primary)] font-medium"
+                            >
+                                View case studies 
+                    </ButtonLink>
+                    </section>
                 </Container>
             </section>
         </main>

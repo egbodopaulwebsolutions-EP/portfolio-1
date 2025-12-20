@@ -1,26 +1,60 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useEffect} from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
+import AnnouncementBar from "./AnouncementBar";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  const [hidden, setHidden] = useState(false);
+const [lastScrollY, setLastScrollY] = useState(0);
+
+
+useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      // scrolling down → hide
+      setHidden(true);
+    } else {
+      // scrolling up → show
+      setHidden(false);
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [lastScrollY]);
+
+
   const closeMenu = () => setOpen(false);
 
   return (
     <>
+    
       <header
-        className="
-          fixed top-0 left-0 w-full z-[9999]
-          backdrop-blur-sm bg-[var(--white)]/80
-          border-b border-[var(--gray-200)]
-        "
-      >
+  className={clsx(
+    `
+    sticky top-0 z-[9999]
+    backdrop-blur-sm bg-[var(--white)]/80
+    border-b border-[var(--gray-200)]
+    transition-transform duration-300
+    `,
+    hidden && "-translate-y-full"
+  )}
+>
+
+
+
+        
         <div className="px-6 md:px-10 flex items-center justify-between py-4">
 
           {/* Logo */}

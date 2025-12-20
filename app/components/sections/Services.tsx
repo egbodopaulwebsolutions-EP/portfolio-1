@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import { SERVICES } from "../../data/services";
 import type { services } from "../../data/services";
+import Link from "next/link";
 
 import {
   useSectionFade,
@@ -44,9 +45,9 @@ export default function ServicesModules() {
       </svg>
       <Container center>
         <header className="pt-[var(--space-section-sm)]">
-          <h1 className="text-display h2 text-[var(--color-primary)]">
+          <h2 className="text-display h2 text-[var(--color-primary)]">
             Services
-          </h1>
+          </h2>
         </header>
       </Container>
 
@@ -66,16 +67,10 @@ type ServiceIndividualProps = services & {
   reversed?: boolean;
 };
 
-/* -------------------------------------------------
-   SINGLE SERVICE
--------------------------------------------------- */
 export function ServiceIndividual({
-  kicker,
   title,
   desc,
   media,
-  homeList,
-  startText,
   slug,
   reversed = false,
 }: ServiceIndividualProps) {
@@ -86,65 +81,61 @@ export function ServiceIndividual({
   const hoverRef = useHoverScale(1.03);
 
   return (
-    <section
-      className="
-        py-[var(--space-section-sm)]
-      "
-    >
-      <Container size="default">
-        <div
-          className={clsx(
-            "flex flex-col gap-6 ",
-            "md:grid md:grid-cols-2 md:",
-            reversed && "md:"
-          )}
-        >
-          {/* MEDIA */}
-          <div
-            ref={(el) => {
-              containerRef.current = el;
-              hoverRef.current = el;
-            }}
-            className="relative w-full overflow-hidden rounded-xl"
-          >
-            {media.endsWith(".mp4") ? (
-              <video
-                src={media}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <img
-                src={media}
-                alt={title}
-                className="w-full h-full object-contain"
-              />
+    <section className="py-[var(--space-section-sm)]">
+      <Container>
+        <Link href={`/service/${slug}`} className="block">
+          <article
+            className={clsx(
+              "grid gap-6 md:grid-cols-2 items-center",
+              reversed && "md:[&>*:first-child]:order-2"
             )}
-          </div>
-
-          {/* TEXT */}
-          <div className="gsap-text-block flex flex-col gap-0">
-            <h2 className="gsap-text-item h3 text-[var(--color-secondary)] text-display">
-              {title}
-            </h2>
-            <p className="gsap-text-item text-lead text-[var(--gray-700)]">
-              {desc}
-            </p>
-            {/* CTAs */}
-            <div className="flex flex-wrap pt-6">
-              <ButtonLink
-                href={`/service/${slug}`}
-                className="text-[var(--color-primary)] text-meta"
-              >
-                Learn More
-              </ButtonLink>
+          >
+            {/* MEDIA */}
+            <div
+              ref={(el) => {
+                containerRef.current = el;
+                hoverRef.current = el;
+              }}
+              className="relative overflow-hidden rounded-xl"
+            >
+              <div ref={innerRef}>
+                {media.endsWith(".mp4") ? (
+                  <video
+                    src={media}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <img
+                    src={media}
+                    alt={title}
+                    className="h-full w-full object-contain"
+                  />
+                )}
+              </div>
             </div>
-          </div>
-        </div>
+
+            {/* TEXT */}
+            <div className="gsap-text-block flex flex-col gap-2">
+              <h3 className="gsap-text-item h3 text-display text-[var(--color-secondary)]">
+                {title}
+              </h3>
+
+              <p className="gsap-text-item text-lead text-[var(--gray-700)]">
+                {desc}
+              </p>
+
+              <span className="pt-6 text-meta text-[var(--color-primary)]">
+                Learn more
+              </span>
+            </div>
+          </article>
+        </Link>
       </Container>
     </section>
   );
 }
+

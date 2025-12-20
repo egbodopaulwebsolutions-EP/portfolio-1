@@ -40,9 +40,9 @@ export default function Home() {
 
       <BrandsSection />
       <TestimonialStory />
+      <HomeCaseStudies />
       <Services />
       <Process />
-      <HomeCaseStudies />
     </main>
   );
 }

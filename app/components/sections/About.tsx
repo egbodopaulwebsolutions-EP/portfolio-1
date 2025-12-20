@@ -1,9 +1,10 @@
 "use client";
 
 import Container from "../utilities/container";
-import TripleRingImage from "../utilities/TriColorCircle";
+import TripleRing from "../utilities/TriColorCircle";
 import Underline from "../utilities/Underline";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -34,7 +35,14 @@ export default function AboutPage() {
               decisions affect real people on the other side of a screen.
             </p>
             <span className="block">
-              <TripleRingImage src="/media/profile-egbodo-paul.png" alt="profile image" size={70}/>
+              <TripleRing  size={70}>
+                <Image
+                  src="/media/profile-egbodo-paul.png"
+                  alt="profile image" 
+                  fill
+                  className="object-cover"
+                />
+              </TripleRing>
               </span>
             </div>
             <p>

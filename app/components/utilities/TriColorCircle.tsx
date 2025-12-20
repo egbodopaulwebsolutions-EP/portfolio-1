@@ -1,15 +1,16 @@
 import Image from "next/image";
+import { Children } from "react";
 
 type TripleRingImageProps = {
-  src: string;
-  alt: string;
+
   size?: number;
+  children:React.ReactNode,
 };
 
 export default function TripleRingImage({
-  src,
-  alt,
+ 
   size = 240,
+  children
 }: TripleRingImageProps) {
   const strokeWidth = 5;
   const radius = (size - strokeWidth) / 2;
@@ -68,13 +69,14 @@ export default function TripleRingImage({
 
       {/* Image */}
       <div className="absolute inset-[10px] rounded-full overflow-hidden bg-neutral-100">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover"
-        />
+        {children}
       </div>
     </div>
   );
 }
+{/*<Image
+          src={src}
+          alt={alt}
+          fill
+          className="object-cover"
+        />*/}

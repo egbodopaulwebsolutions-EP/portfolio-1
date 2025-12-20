@@ -6,6 +6,8 @@ import { Inter, Plus_Jakarta_Sans, Roboto } from "next/font/google";
 import TopLoader from "./components/layout/TopLoader";
 import GoogleAuthUI from "./components/layout/Contact";
 import Footer from "./components/layout/Footer";
+import FloatingContact from "./components/layout/ContactFloatingIcon";
+import AnnouncementBar from "./components/layout/AnouncementBar";
 
 
 const jakarta = Roboto({
@@ -50,15 +52,17 @@ export default function RootLayout({
 
   return (
 
-    <html lang="en">
+    <html lang="en" className="min-h-[100vh]">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${JetBrains_Mono_font.variable} ${Inter_font.variable} ${jakarta.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${JetBrains_Mono_font.variable} ${Inter_font.variable} ${jakarta.variable} antialiased min-h-[100vh]`}
       >
         <TopLoader />
+        <AnnouncementBar/>
         <Navbar />
         {children}
         <GoogleAuthUI/>
         <Footer/>
+        <FloatingContact/>
       </body>
     </html>
   );

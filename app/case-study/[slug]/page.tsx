@@ -7,10 +7,10 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ButtonLink from "@/app/components/utilities/Button";
 
 import CASE_STUDIES from "@/app/data/cs_cases";
 import Container from "@/app/components/utilities/container";
-import { Import } from "lucide-react";
 import { CaseStudyItems } from "@/app/components/sections/CaseStudies";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -240,6 +240,14 @@ const nextCaseStudy =
           </blockquote>
         </Container>
       </section>
+      <section className="flex justify-center">
+                    <ButtonLink
+                                href="/services"
+                                className="inline-block mx-auto  mt-10 mb-10 text-meta text-[var(--color-primary)] font-medium"
+                            >
+                                View services
+                    </ButtonLink>
+                    </section>
       {/* NEXT CASE STUDY */}
 <section className="border-t border-neutral-200 bg-neutral-50 py-[var(--space-section)]">
   <Container>
@@ -259,7 +267,16 @@ const nextCaseStudy =
        
       />
     </div>
+    
   </Container>
+  <section className="flex justify-center">
+                    <ButtonLink
+                                href="/contact"
+                                className="inline-block mx-auto btn-primary  mt-16 mb-8 text-meta text-[var(--color-primary)] font-medium"
+                            >
+                              Start your project
+                    </ButtonLink>
+                    </section>
 </section>
 
     </main>

@@ -148,6 +148,7 @@ body,
   -moz-osx-font-smoothing: grayscale;
 
 
+
 }
 
 .track {
@@ -156,7 +157,7 @@ body,
 }
 
 body {
-  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /*end*/
@@ -281,7 +282,7 @@ body {
   background-color: var(--color-secondary);
   color: var(--white);
   border-radius: var(--radius-btn);
-  padding: 0.2rem 1.7rem;
+  padding: 1rem 1.7rem;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   box-shadow: var(--shadow-soft);
   transition: filter 0.4s ease-in-out;
@@ -294,9 +295,9 @@ body {
 .btn-secondary {
   background: white;
   color: var(--color-secondary);
-  padding: 0.2rem 1.7rem;
+  padding: 1rem 1.7rem;
   position: relative;
-  border-radius: var(--radius-btn);
+  border-radius: 10px;
   width: fit-content;
   cursor: pointer;
   transition: filter 0.1s ease-in-out, background-color 0.4s ease-in-out;
