@@ -6,7 +6,7 @@ import Container from "../utilities/container";
 
 export default function HomeHero() {
   return (
-    <main className="relative pt-[3rem] pb-[var(--space-section)]  overflow-hidden">
+    <main className="relative pt-[var(--space-section-lg)] pb-[var(--space-section)]  overflow-hidden">
       
       {/* Noise overlay */}
       <svg

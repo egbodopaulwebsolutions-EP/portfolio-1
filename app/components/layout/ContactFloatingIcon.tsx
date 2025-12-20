@@ -31,16 +31,16 @@ export default function FloatingContact() {
       {/* Overlay */}
       {open && (
         <div
-          className="fixed inset-0 z-50 flex items-end justify-end bg-black/20 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-end justify-end  backdrop-blur-sm"
           onClick={() => setOpen(false)}
         >
           {/* Modal */}
           <div
             onClick={(e) => e.stopPropagation()}
-            className="mb-24 mr-6 w-64 rounded-xl bg-white p-4 shadow-xl animate-in fade-in zoom-in"
+            className="mb-24 mr-6 w-64 box bg-white p-4 shadow-xl animate-in fade-in zoom-in"
           >
             <header className="mb-3 flex items-center justify-between">
-              <h4 className="text-sm font-medium text-neutral-900">
+              <h4 className="text-displat h5 font-medium text-neutral-900">
                 Contact me
               </h4>
               <button onClick={() => setOpen(false)}>
@@ -52,17 +52,17 @@ export default function FloatingContact() {
               <ContactItem
                 href="https://wa.me/15551234567"
                 label="WhatsApp"
-                icon="/icons/whatsapp.svg"
+                icon="/images/whatsapp-icon.svg"
               />
               <ContactItem
                 href="https://m.me/yourusername"
                 label="Messenger"
-                icon="/icons/messenger.svg"
+                icon="/images/messenger.svg"
               />
               <ContactItem
                 href="viber://chat?number=15551234567"
                 label="Viber"
-                icon="/icons/viber.svg"
+                icon="/images/viber-icon.svg"
               />
               <ContactItem
                 href="tel:+15551234567"
@@ -93,14 +93,14 @@ function ContactItem({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+      className="flex items-center  gap-3 rounded-md px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
     >
       {typeof icon === "string" ? (
         <img src={icon} alt={label} className="h-5 w-5" />
       ) : (
         icon
       )}
-      <span>{label}</span>
+      <span className="text-contact">{label}</span>
     </a>
   );
 }

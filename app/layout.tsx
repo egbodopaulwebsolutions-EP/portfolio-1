@@ -54,10 +54,9 @@ export default function RootLayout({
 
     <html lang="en" className="min-h-[100vh]">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${JetBrains_Mono_font.variable} ${Inter_font.variable} ${jakarta.variable} antialiased min-h-[100vh]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${JetBrains_Mono_font.variable} ${Inter_font.variable} ${jakarta.variable} antialiased `}
       >
         <TopLoader />
-        <AnnouncementBar/>
         <Navbar />
         {children}
         <GoogleAuthUI/>
