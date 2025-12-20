@@ -84,7 +84,7 @@ export const SERVICES: services[] = [
     ],
   },
 {
-  slug: "Search engine optimisation",
+  slug: "Search-engine-optimisation",
   kicker: "Visibility",
   title: "Search engine optimisation",
   desc: "For businesses who want to be found by the right people.",

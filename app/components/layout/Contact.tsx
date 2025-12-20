@@ -104,38 +104,46 @@ export default function ContactPage() {
 
   const selectedCountry = COUNTRIES.find((c) => c.iso === countryISO);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (!selectedCountry) return;
+ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  if (!selectedCountry) return;
 
-    setLoading(true);
+  setLoading(true);
 
-    const formData = new FormData(e.currentTarget);
+  const formData = new FormData(e.currentTarget);
 
-    const payload = {
-      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-      subject: "New Project Inquiry",
-      from_name: formData.get("name"),
-      email: formData.get("email"),
-      phone: `${selectedCountry.code} ${formData.get("phone")}`,
-      business: formData.get("business"),
-      message: formData.get("message"),
-    };
+  const payload = {
+    access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY="4ce5a4ba-e822-4d7a-94fb-2c5874054289"!,
+    subject: "New Project Inquiry",
+    from_name: String(formData.get("name") || ""),
+    email: String(formData.get("email") || ""),
+    phone: `${selectedCountry.code} ${String(formData.get("phone") || "")}`,
+    business: String(formData.get("business") || ""),
+    message: String(formData.get("message") || ""),
+  };
 
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
 
-      if (res.ok) {
-        setStep("confirmation");
-      }
-    } finally {
-      setLoading(false);
+    const data = await res.json();
+
+    if (data.success) {
+      setStep("confirmation");
+    } else {
+      console.error(data);
     }
+  } finally {
+    setLoading(false);
   }
+}
+
 
   if (step === "confirmation") {
     return (

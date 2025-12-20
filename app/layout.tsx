@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Poppins, JetBrains_Mono, Geist_Mono, } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
-import LenisProvider from "./components/layout/LenisProvider";
 import { Inter, Plus_Jakarta_Sans, Roboto } from "next/font/google";
 import TopLoader from "./components/layout/TopLoader";
 import GoogleAuthUI from "./components/layout/Contact";
@@ -55,7 +54,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${JetBrains_Mono_font.variable} ${Inter_font.variable} ${jakarta.variable} antialiased`}
       >
-
         <TopLoader />
         <Navbar />
         {children}

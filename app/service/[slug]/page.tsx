@@ -156,7 +156,7 @@ export default function ServicePage({ params }: PageProps) {
                   <h3 className="h3 text-display text-[var(--color-secondary)]">
                     {item.title}
                   </h3>
-                  <div><img alt={item.title} src={item.media} /></div>
+                  <div><img className="rounded-lg" alt={item.title} src={item.media} /></div>
                   <p className="text-lead text-neutral-600 leading-relaxed">
                     {item.desc}
                   </p>
