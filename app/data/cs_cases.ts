@@ -90,7 +90,7 @@ const CASE_STUDIES: CaseStudy[] = [
           "Custom Liquid logic dynamically applied brand-specific styling, layouts, and business rules without relying on performance-heavy third-party apps.",
         implication:
           "Enabled deep customization, long-term flexibility, and strong performance.",
-        mockup: "/FGFS/liquid-logic.png"
+        mockup: "/FGFS/Liquid-logic.png"
       },
       {
         title: "Brand-Separated Cart Experience",

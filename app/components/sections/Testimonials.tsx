@@ -20,7 +20,7 @@ export default function TestimonialStory() {
         "We had great products — the challenge was communicating that clearly online. Paul helped us build a website that finally reflects the quality of what we do ",
       name: "James",
       role: "CEO, FGFS",
-      photo: "/images/testimonials/profile-testimonial1.png",
+      photo: "/images/testimonials/J_1.webp",
     },
   ];
 

@@ -30,7 +30,7 @@ export default function ServicePage({ params }: PageProps) {
       {/* HERO */}
       <section className="min-h-[70vh] py-[var(--space-section-lg)] flex flex-col justify-center border-b border-[var(--gray-200)]">
         <Container>
-          <div className=" flex gap-10 flex-row">
+          <div className=" flex gap-10 flex-col md:flex-row">
             <div className="">
               <Underline className="underline-cust w-fit">
                 {service.kicker}

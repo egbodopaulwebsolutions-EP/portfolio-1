@@ -98,7 +98,7 @@ export default function PricingPage() {
 
             <p className="mx-auto max-w-xl text-lead text-neutral-600">
               Share a bit about your product or service, and I’ll help clarify
-              scope, timeline, and whether we’re a good fit.
+              scope and timeline.
             </p>
 
             <Link href="/contact" className="btn-primary mt-6">

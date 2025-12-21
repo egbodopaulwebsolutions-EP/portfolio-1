@@ -12,7 +12,7 @@ export default function HomeCaseStudies() {
 const gridAnimation = useGridStagger();
   return (
     <>
-    <section id="work" className="py-[var(--space-section)] relative">
+    <section id="work" className="py-[var(--space-section-sm)] relative">
       {/* Noise overlay */}
       <svg
         aria-hidden

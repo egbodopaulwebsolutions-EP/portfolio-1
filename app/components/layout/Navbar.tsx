@@ -65,7 +65,7 @@ export default function Navbar() {
                 "is-active text-[var(--gray-900)]"
               )}
             >
-              Case Studies
+              Case studies
             </Link>
 
             <Link
@@ -154,6 +154,7 @@ export default function Navbar() {
 
         <nav className="flex flex-col items-center justify-center h-full gap-8 text-2xl tracking-tight">
           <Link href="/" onClick={closeMenu}>Home</Link>
+          <Link href="/case-studies" onClick={closeMenu}>Services</Link>
           <Link href="/case-studies" onClick={closeMenu}>Case Studies</Link>
           <Link href="/pricing" onClick={closeMenu}>Pricing</Link>
           <Link href="/about" onClick={closeMenu}>About</Link>

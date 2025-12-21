@@ -50,17 +50,17 @@ export default function FloatingContact() {
 
             <ul className="space-y-2">
               <ContactItem
-                href="https://wa.me/15551234567"
+                href="https://wa.me/639671825359"
                 label="WhatsApp"
                 icon="/images/whatsapp-icon.svg"
               />
               <ContactItem
-                href="https://m.me/yourusername"
+                href="https://m.me/egpwebsolutions"
                 label="Messenger"
                 icon="/images/messenger.svg"
               />
               <ContactItem
-                href="viber://chat?number=15551234567"
+                href="viber://chat?number=639154588891"
                 label="Viber"
                 icon="/images/viber-icon.svg"
               />
