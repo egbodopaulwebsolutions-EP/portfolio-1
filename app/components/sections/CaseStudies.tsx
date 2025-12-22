@@ -115,7 +115,7 @@ gridRef
                   {cs.overview && TruncateWords(cs.overview, 10)}
 
                 </p>
-                <span className="text-meta text-[var(--color-primary)]">
+                <span className="text-meta text-[var(--color-accent)]">
                   View Case →
                 </span>
               </div>

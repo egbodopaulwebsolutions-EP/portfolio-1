@@ -31,7 +31,7 @@ export default function AlternatingPinnedStory() {
 
       <ButtonLink
                   href="/how-i-work"
-                  className="mt-4 w-fit text-meta text-[var(--color-primary)]"
+                  className="mt-4 w-fit text-meta text-[var(--color-accent)]"
                 >
                   Learn more →
                 </ButtonLink>

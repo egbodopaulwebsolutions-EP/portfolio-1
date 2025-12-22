@@ -44,7 +44,7 @@ export default function ServicesModules() {
         />
       </svg>
       <Container center>
-        <header className="pt-[var(--space-section-sm)]">
+        <header className="py-[var(--space-section-sm)]">
           <h2 className="text-display h2 text-[var(--color-primary)]">
             Services
           </h2>
@@ -82,11 +82,11 @@ export function ServiceIndividual({
 
   return (
     <section className="py-[var(--space-section-sm)]">
-      <Container>
+      <Container size="narrow">
         <Link href={`/service/${slug}`} className="block">
           <article
             className={clsx(
-              "grid gap-6 md:grid-cols-2 items-center",
+              "grid gap-6 md:grid-cols-2 ",
               reversed && "md:[&>*:first-child]:order-2"
             )}
           >
@@ -96,7 +96,7 @@ export function ServiceIndividual({
                 containerRef.current = el;
                 hoverRef.current = el;
               }}
-              className="relative overflow-hidden rounded-xl"
+              className="relative h-full rounded-xl"
             >
               <div ref={innerRef}>
                 {media.endsWith(".mp4") ? (
@@ -106,13 +106,13 @@ export function ServiceIndividual({
                     loop
                     muted
                     playsInline
-                    className="h-full w-full object-cover"
+                    className="h-full w-full rounded-xl object-cover"
                   />
                 ) : (
                   <img
                     src={media}
                     alt={title}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full rounded-xl object-cover"
                   />
                 )}
               </div>
@@ -128,7 +128,7 @@ export function ServiceIndividual({
                 {desc}
               </p>
 
-              <span className="pt-6 text-meta text-[var(--color-primary)]">
+              <span className="pt-6 text-meta text-[var(--color-accent)]">
                 Learn more
               </span>
             </div>

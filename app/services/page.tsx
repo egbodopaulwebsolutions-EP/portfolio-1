@@ -15,7 +15,7 @@ export default function ServicesPage() {
            HERO
         -------------------------------------------------- */}
         <Container size="narrow" center>
-        <header className="flex flex-col relative items-center underline-cust">
+        <header className="flex flex-col mb-6 relative items-center underline-cust">
           <h1 className="h1 text-display text-[var(--color-primary)]">
             Services
           </h1>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
 
           <ButtonLink
                   href="/contact"
-                  className="mt-4 w-fit text-meta text-[var(--color-primary)]"
+                  className="mt-4 w-fit text-meta text-[var(--color-accent)]"
                 >
                   Start a conversation →
                 </ButtonLink>

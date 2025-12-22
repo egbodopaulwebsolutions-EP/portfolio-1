@@ -51,16 +51,16 @@ export default function HomeHero() {
           <h1 className="text-display h1 tracking-tight">
             Websites that {" "}
             <span className="relative inline-block px-3">
-              <span className="absolute inset-0 -skew-y-2 rounded-xl bg-[var(--color-primary)]/10" />
-              <span className="relative text-[var(--color-primary)]">
+              <span className="absolute inset-0 -skew-y-2 rounded-xl bg-[var(--color-secondary)]/10" />
+              <span className="relative text-[var(--color-secondary)]">
                 communicate clearly
               </span>
             </span>
             <br className="hidden sm:block" />
             and 
             <span className="relative inline-block px-3">
-              <span className="absolute inset-0 -skew-y-2 rounded-xl bg-[var(--color-secondary)]/10" />
-              <span className="relative text-[var(--color-secondary)]">
+              <span className="absolute inset-0 -skew-y-2 rounded-xl bg-[var(--color-primary)]/10" />
+              <span className="relative text-[var(--color-primary)]">
                 earn trust
               </span>
             </span>

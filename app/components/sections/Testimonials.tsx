@@ -17,7 +17,7 @@ export default function TestimonialStory() {
   const testimonials: Testimonial[] = [
     {
       quote:
-        "We had great products — the challenge was communicating that clearly online. Paul helped us build a website that finally reflects the quality of what we do ",
+        "We had great products, the challenge was communicating those products clearly online. Paul helped us build a website that finally reflects the quality of what we do ",
       name: "James",
       role: "CEO, FGFS",
       photo: "/images/testimonials/J_1.webp",

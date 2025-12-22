@@ -1,17 +1,25 @@
 // app/services/[slug]/page.tsx
+"use client"
+
 import ButtonLink from "@/app/components/utilities/Button";
 import Container from "@/app/components/utilities/container";
 import Underline from "@/app/components/utilities/Underline";
 import { SERVICES } from "@/app/data/services"
 import { notFound } from "next/navigation"
+import caseStudies from "../../data/cs_cases";
+import { useGridStagger } from "../../gsaphooks/useGridStagger";
 import { use } from "react";
-import Image from "next/image";
+import Link from "next/link";
+import { CaseStudyItems } from "@/app/components/sections/CaseStudies";
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
 
 export default function ServicePage({ params }: PageProps) {
+
+  const gridAnimation = useGridStagger();
+
   const { slug } = use(params);
 
   const service = SERVICES.find((cs) => cs.slug === slug);
@@ -133,7 +141,6 @@ export default function ServicePage({ params }: PageProps) {
           />
         </svg>
         <Container size="default">
-          <div className="container space-y-12">
             <header className=" space-y-4">
               <h2 className="h2 text-display text-[var(--color-primary)]">
                 <Underline className="">
@@ -147,9 +154,10 @@ export default function ServicePage({ params }: PageProps) {
             </header>
 
             <div className="grid gap-8 md:grid-cols-3">
-              {otherServices.map((item) => (
+              {otherServices.map((item, i) => (
+                <Link href={`/service/${item.slug}`}>
                 <article
-                  key={item.slug}
+                  key={i}
                   className="space-y-4"
                 >
 
@@ -161,16 +169,28 @@ export default function ServicePage({ params }: PageProps) {
                     {item.desc}
                   </p>
 
-                  <ButtonLink
-                    href={`/service/${item.slug}`}
-                    className="inline-block text-meta text-[var(--color-primary)] font-medium"
+                  <span
+                    className="inline-block text-[var(--color-accent)] font-medium"
                   >
                     Learn More
-                  </ButtonLink>
+                  </span>
                 </article>
+                </Link>
               ))}
+              
             </div>
-          </div>
+        </Container>
+      </section>
+      <section className="pb-[var(--space-section)]">
+        <Container>
+        <header className="">
+          <h2 className="text-display mb-10 mt-10 h2 text-[var(--color-primary)]">
+            Recent Case Studies
+          </h2>
+        </header>
+        </Container>
+        <Container>
+          <CaseStudyItems featured={caseStudies} gridRef={gridAnimation} />
         </Container>
       </section>
 

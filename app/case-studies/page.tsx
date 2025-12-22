@@ -1,12 +1,9 @@
 "use client"
 
-import CaseStudies, { CaseStudyItems } from "../components/sections/CaseStudies"
+import  { CaseStudyItems } from "../components/sections/CaseStudies"
 import Container from "../components/utilities/container";
-import type { CaseStudy } from "../data/cs_cases";
 import caseStudies from "../data/cs_cases";
 import { useGridStagger } from "../gsaphooks/useGridStagger";
-
-
 
 
 export default function caseStudy() {

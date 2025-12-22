@@ -162,10 +162,7 @@ export default function AboutPage() {
                       data-fade
                       className="mt-20 max-w-3xl border-l-4 border-[var(--color-secondary-support)] pl-6 italic text-lead"
                     >
-                    I don’t claim to know everything. What I do bring is strong
-              research and questioning skills, systems-level thinking, the
-              ability to learn fast, and genuine care for building things that
-              make sense.
+                    Every project begins with research, thoughtful questioning, and systems-level thinking, so decisions are grounded, not assumed.
                     </blockquote>
                   </Container>
                 </section>

@@ -55,7 +55,7 @@ export default function FloatingContact() {
                 icon="/images/whatsapp-icon.svg"
               />
               <ContactItem
-                href="https://m.me/egpwebsolutions"
+                href="https://m.me/egbodopaulwebsolutions"
                 label="Messenger"
                 icon="/images/messenger.svg"
               />
@@ -65,8 +65,8 @@ export default function FloatingContact() {
                 icon="/images/viber-icon.svg"
               />
               <ContactItem
-                href="tel:+15551234567"
-                label="Call"
+                href="tel:+639671825359"
+                label="Text/Call"
                 icon={<Phone size={18} />}
               />
             </ul>
