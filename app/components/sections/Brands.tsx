@@ -25,7 +25,7 @@ export default function BrandsSection() {
               alt=""
               width={120}
               height={40}
-              className="h-10 w-auto transition-opacity"
+              className="h-5 md:h-8 w-auto transition-opacity"
             />
           ))}
         </div>

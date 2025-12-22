@@ -73,7 +73,7 @@ export default function WorkGridSection({
                   relative
                   mb-3
                   overflow-hidden
-                  rounded-sm
+                  rounded-xs
                   bg-neutral-900
                 "
               >

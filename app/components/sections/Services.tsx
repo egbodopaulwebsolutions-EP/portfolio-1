@@ -96,7 +96,7 @@ export function ServiceIndividual({
                 containerRef.current = el;
                 hoverRef.current = el;
               }}
-              className="relative h-full rounded-xl"
+              className="relative h-full mb-10 rounded-xl"
             >
               <div ref={innerRef}>
                 {media.endsWith(".mp4") ? (

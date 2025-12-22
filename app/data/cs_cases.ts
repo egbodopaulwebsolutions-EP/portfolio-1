@@ -37,7 +37,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: "Unifying Five Shopify Brands Without Losing Brand Identity",
     client: "Fresh and Good Food Solutions",
     role: "Solo Web & UI/UX Designer and Shopify Developer",
-    timeline: "14 weeks",
+    timeline: "10 weeks",
     websiteURL: "https://freshandgoodfood.com",
 
     overview:
