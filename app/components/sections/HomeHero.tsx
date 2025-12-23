@@ -68,7 +68,7 @@ export default function HomeHero() {
 
           {/* Subtext */}
           <p className="text-lead mt-1 text-gray-700">
-           Through structure, hierarchy, and restraint, I help businesses present what they do without friction.
+           Through structure, hierarchy and thoughtful design, I help businesses present what they do clearly without friction.
           </p>
 
           {/* CTAs */}

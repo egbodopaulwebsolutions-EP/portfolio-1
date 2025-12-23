@@ -155,7 +155,7 @@ export default function ServicePage({ params }: PageProps) {
 
             <div className="grid gap-8 md:grid-cols-3">
               {otherServices.map((item, i) => (
-                <Link href={`/service/${item.slug}`}>
+                <Link href={`/service/${item.slug}`} key={i}>
                 <article
                   key={i}
                   className="space-y-4"

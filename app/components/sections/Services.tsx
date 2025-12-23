@@ -83,7 +83,7 @@ export function ServiceIndividual({
   return (
     <section className="py-[var(--space-section-sm)]">
       <Container size="narrow">
-        <Link href={`/service/${slug}`} className="block">
+        <Link href={`/service/${slug}`} key={slug} className="block">
           <article
             className={clsx(
               "grid gap-6 md:grid-cols-2 ",
